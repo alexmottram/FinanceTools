@@ -5,7 +5,7 @@ import pandas as pd
 BASE_DIR = '/Temp/FXData'
 
 
-def main():
+def run():
     symbol = 'GBPUSD'
     year = 2018
     week = 1
@@ -31,3 +31,5 @@ def main():
     temp = 1
 
 
+if __name__ == "__main__":
+    run()
