@@ -19,11 +19,12 @@ def run():
         for chunk in r.iter_content(chunk_size=1024):
             file.write(chunk)
 
+    csv_filename =f"{directory}/{symbol}_{year}_w{week}.csv"
+
     df = pd.read_csv(
-        filename,
-        compression='gzip',
+        csv_filename,
         header=0,
-        sep=' ',
+        sep=',',
         quotechar='"',
         error_bad_lines=False
     )
